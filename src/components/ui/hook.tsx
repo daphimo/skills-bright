@@ -1,26 +1,27 @@
 import { useEffect } from "react";
 
-export const useSmoothScroll = () => {
+export const useSmoothScroll = (offset: number = 70) => {
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName !== "A") return;
+  const anchor = (e.target as HTMLElement).closest("a");
+  if (!anchor) return;
 
-      const anchor = target as HTMLAnchorElement;
-      const href = anchor.getAttribute("href");
-      if (!href || !href.startsWith("#")) return;
+  const href = anchor.getAttribute("href");
+  if (!href || !href.startsWith("#")) return;
 
-      const section = document.querySelector(href);
-      if (section) {
-        e.preventDefault();
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    };
+  const section = document.querySelector<HTMLElement>(href);
+  if (section) {
+    e.preventDefault();
+    const top = section.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+};
+
 
     document.addEventListener("click", handleClick);
 
     return () => {
       document.removeEventListener("click", handleClick);
     };
-  }, []);
+  }, [offset]);
 };

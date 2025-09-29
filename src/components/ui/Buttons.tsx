@@ -15,27 +15,18 @@ const Button: FC<ButtonProps> = ({
 }) => {
   const isPrimary = variant === "primary";
 
-  // Define text color based on variant
-  const textColor = isPrimary ? "#F7F9FC" : "#4BAEE8";
-
   return (
     <a
       href={link}
       aria-label={ariaLabel || label}
-      className={`inline-flex items-center justify-center px-4 py-1 font-medium rounded-[6px] border-2
-        ${isPrimary
-          ? "bg-[#4BAEE8] border-[#4BAEE8]"
-          : "bg-[#F7F9FC] border-[#4BAEE8]"
+      className={`inline-flex relative items-center justify-center px-4 py-1 font-medium rounded-[6px] border-2
+        ${
+          isPrimary
+            ? "bg-[#1c3f74] border-[#1c3f74] text-white"
+            : "bg-white border-[#1c3f74] text-[#1c3f74]"
         }`}
     >
-      {/* Button content */}
-      <span
-        className="flex items-center"
-        style={{ color: textColor }}
-      >
-        {label }
-       
-      </span>
+      <span className="flex items-center">{label}</span>
     </a>
   );
 };

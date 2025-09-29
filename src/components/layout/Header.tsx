@@ -1,6 +1,6 @@
 // src/components/layout/Header.tsx
 import { useState, useEffect } from "react";
-import { brandColors } from "../Brandcolors";
+import { brandColors } from "../Brandcolors.tsx";
 import { Menu, X } from "lucide-react";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import logo from "/files/company-logo.svg";
@@ -12,7 +12,6 @@ const navItems = [
   { id: "services", label: "Services", href: "#services" },
   { id: "benefits", label: "Benefits", href: "#benefits" },
   { id: "process", label: "Process", href: "#process" },
-  { id: "team", label: "Team", href: "#team" },
   { id: "industries", label: "Industries", href: "#industries" },
 ];
 
@@ -76,9 +75,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-         
-          <Buttons label="Get HR Support" link="#contact" variant="primary"/>
-
+          <Buttons label="Get HR Support" link="#contact" variant="primary" />
         </div>
 
         {/* Mobile Burger */}
@@ -128,6 +125,16 @@ export default function Header() {
                 color: brandColors.text,
                 borderColor: brandColors.highlight,
               }}
+              onClick={(e) => {
+                e.preventDefault(); // prevent default anchor jump
+                setDrawerOpen(false); // close drawer
+
+                // Smooth scroll to target section
+                const target = document.querySelector(item.href);
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               {item.label}
             </a>
@@ -158,9 +165,8 @@ export default function Header() {
           </div>
 
           {/* CTA */}
-         
-          <Buttons label="Get HR Support" link="#contact" variant="primary"/>
 
+          <Buttons label="Get HR Support" link="#contact" variant="primary" />
         </div>
       </div>
     </header>

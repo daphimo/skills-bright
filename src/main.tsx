@@ -1,26 +1,49 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import './App.css';
-import App from './App.tsx';
-import Header from './components/layout/Header.tsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import "./App.css";
+import App from "./App.tsx";
+import About from "./About.tsx";
+import Services from "./Services.tsx";
+import Process from "./Process.tsx";
+import Industries from "./Industries.tsx";
+import Contact from "./Contact.tsx";
+import Header from "./components/layout/Header.tsx";
+import Footer from "./components/layout/Footer.tsx";
 import { useSmoothScroll } from "./components/ui/hook.tsx";
 
-// Wrapper component to use the global smooth scroll hook
 function Root() {
-  useSmoothScroll(); // Hook applied globally
+  useSmoothScroll();
 
   return (
     <>
       <Header />
       <div className="pt-16">
-        <App />
+        <div id="home">
+          <App />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="services">
+          <Services />
+        </div>
+         <div id="process">
+          <Process />
+        </div>
+         <div id="industries">
+          <Industries />
+        </div>
+         <div id="contact">
+          <Contact />
+        </div>
       </div>
+      <Footer />
     </>
   );
 }
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Root />
   </StrictMode>

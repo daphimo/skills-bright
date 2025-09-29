@@ -1,45 +1,42 @@
-import { brandColors } from "./components/Brandcolors";
+import type { FC } from "react";
+import Buttons from "./components/ui/Buttons.tsx";
 
-export default function ColorButtonsGrid() {
-  const colorKeys = Object.keys(brandColors); // array of strings
-
-  // Explicitly type the buttons array
-  const buttons: React.ReactNode[] = [];
-
-  colorKeys.forEach((bgKey) => {
-    colorKeys.forEach((textKey) => {
-      if (bgKey !== textKey) {
-        buttons.push(
-          <button
-            key={`${bgKey}-${textKey}`}
-            style={{
-              backgroundColor: brandColors[bgKey as keyof typeof brandColors],
-              color: brandColors[textKey as keyof typeof brandColors],
-              border: "1px solid #ccc",
-              padding: "10px 20px",
-              margin: "5px",
-              borderRadius: "6px",
-              cursor: "pointer",
-            }}
-          >
-            {`${textKey} on ${bgKey}`}
-          </button>
-        );
-      }
-    });
-  });
-
+const HeroSection: FC = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "10px",
-        padding: "20px",
-        backgroundColor: "#f0f0f0",
-      }}
-    >
-      {buttons}
-    </div>
+    <section className="w-full">
+      <div className="mx-auto  px-4 py-6 max-w-7xl grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        {/* Left Content */}
+        <div className="flex flex-col justify-center text-center md:text-left space-y-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-snug">
+            Empowering Workplaces with Smart HR Solutions
+          </h2>
+          <p className="text-gray-700 text-base md:text-lg">
+            From recruitment to training, we handle HR while you focus on
+            business growth.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Buttons label="I want to Hire" link="#contact" variant="primary" />
+            <Buttons
+              label="I am looking for a Job"
+              link="#contact"
+              variant="secondary"
+            />
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="flex justify-center md:justify-end">
+          <img
+            src="/files/hr_banner.jpg"
+            alt="HR Banner"
+            className="w-full h-auto max-w-md md:max-w-full"
+          />
+        </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default HeroSection;
