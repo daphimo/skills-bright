@@ -17,9 +17,9 @@ function Root() {
   useSmoothScroll();
 
   return (
-    <>
+    <div className="w-full">
       <Header />
-      <div className="pt-16">
+      <div className="pt-24 md:pt-16">
         <div id="home">
           <App />
         </div>
@@ -43,7 +43,7 @@ function Root() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
