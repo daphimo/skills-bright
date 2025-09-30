@@ -153,69 +153,111 @@ const SkillBrightSection: React.FC = () => {
         </div>
 
         {/* Bottom: Comparison */}
+<div
+  className="rounded-xl p-5"
+  style={{
+    background: brandColors.card,
+    border: `1px solid ${brandColors.highlight}`,
+    boxShadow: `0 8px 20px ${brandColors.text}20`,
+  }}
+>
+  <h3 className="text-lg mb-4 font-semibold text-center">
+    At a glance — SkillBright vs alternatives
+  </h3>
+
+  {/* Desktop Table */}
+  <div className="hidden md:flex flex-col gap-2">
+    {/* Header */}
+    <div
+      className="grid grid-cols-4 p-2 rounded-lg font-semibold text-sm"
+      style={{
+        background: brandColors.highlight,
+        color: brandColors.text,
+      }}
+    >
+      <div>Feature</div>
+      <div>In-house</div>
+      <div>Basic Outsource</div>
+      <div
+        className="rounded-md px-2"
+        style={{ background: brandColors.secondary, color: "#fff" }}
+      >
+        SkillBright
+      </div>
+    </div>
+
+    {/* Rows */}
+    {comparisonRows.map((row, idx) => (
+      <div
+        key={idx}
+        className="grid grid-cols-4 p-2 text-sm rounded-lg"
+        style={{
+          background: brandColors.background,
+          border: `1px solid ${brandColors.highlight}`,
+        }}
+      >
         <div
-          className="rounded-xl p-5"
+          className="font-semibold"
+          style={{ color: brandColors.primary }}
+        >
+          {row.feature}
+        </div>
+        <div className="text-gray-700">{row.inhouse}</div>
+        <div className="text-gray-700">{row.basic}</div>
+        <div
+          className="rounded-md px-2"
           style={{
-            background: brandColors.card,
-            border: `1px solid ${brandColors.highlight}`,
-            boxShadow: `0 8px 20px ${brandColors.text}20`,
+            background: brandColors.secondary,
+            color: "#fff",
           }}
         >
-          <h3 className="text-lg mb-4 font-semibold text-center">
-            At a glance — SkillBright vs alternatives
-          </h3>
+          {row.sb}
+        </div>
+      </div>
+    ))}
+  </div>
 
-          <div className="flex flex-col gap-2">
-            {/* Header */}
-            <div
-              className="grid grid-cols-4 p-2 rounded-lg font-semibold text-sm"
-              style={{
-                background: brandColors.highlight,
-                color: brandColors.text,
-              }}
+  {/* Mobile Cards */}
+  <div className="flex flex-col gap-4 md:hidden">
+    {comparisonRows.map((row, idx) => (
+      <div
+        key={idx}
+        className="p-4 rounded-lg text-sm"
+        style={{
+          background: brandColors.background,
+          border: `1px solid ${brandColors.highlight}`,
+        }}
+      >
+        <div
+          className="font-semibold mb-2 text-base"
+          style={{ color: brandColors.primary }}
+        >
+          {row.feature}
+        </div>
+        <div className="flex flex-col gap-2">
+          <div>
+            <span className="font-medium">In-house: </span>
+            <span className="text-gray-700">{row.inhouse}</span>
+          </div>
+          <div>
+            <span className="font-medium">Basic Outsource: </span>
+            <span className="text-gray-700">{row.basic}</span>
+          </div>
+          <div className="p-2 rounded" style={{ background: brandColors.secondary, color: "#fff" }}>
+            <span
+              className="font-medium rounded px-1"
+              
             >
-              <div>Feature</div>
-              <div>In-house</div>
-              <div>Basic Outsource</div>
-              <div
-                className="rounded-md px-2"
-                style={{ background: brandColors.secondary, color: "#fff" }}
-              >
-                SkillBright
-              </div>
-            </div>
-
-            {/* Rows */}
-            {comparisonRows.map((row, idx) => (
-              <div
-                key={idx}
-                className="grid grid-cols-4 p-2 text-sm rounded-lg"
-                style={{
-                  background: brandColors.background,
-                  border: `1px solid ${brandColors.highlight}`,
-                }}
-              >
-                <div
-                  className="font-semibold"
-                  style={{ color: brandColors.primary }}
-                >
-                  {row.feature}
-                </div>
-                <div className="text-gray-700">{row.inhouse}</div>
-                <div className="text-gray-700">{row.basic}</div>
-                <div
-                  className="rounded-md px-2"
-                  style={{
-                    background: brandColors.secondary,
-                    color: "#fff",
-                  }}
-                >
-                  {row.sb}
-                </div>
-              </div>
-            ))}
+              SkillBright:
+            </span>{" "}
+            <span>{row.sb}</span>
           </div>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
     </section>
   );
