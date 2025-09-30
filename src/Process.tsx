@@ -34,7 +34,7 @@ const OurProcess: React.FC = () => {
 
   return (
     <section
-      className="relative py-20 bg-white"
+      className="relative py-20 px-4 bg-white"
       style={{ backgroundColor: brandColors.background }}
     >
       {/* Section Title */}
@@ -47,8 +47,9 @@ const OurProcess: React.FC = () => {
 
       <div className="relative max-w-6xl mx-auto">
         {/* Vertical dotted line */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full border-l-4 border-dotted"
-             style={{ borderColor: brandColors.highlight }}
+        <div
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full border-l-4 border-dotted"
+          style={{ borderColor: brandColors.highlight }}
         ></div>
 
         <div className="flex flex-col space-y-16">
@@ -78,7 +79,7 @@ const OurProcess: React.FC = () => {
 
                 {/* Dot on the line */}
                 <div
-                  className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full"
+                  className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full hidden md:block"
                   style={{ backgroundColor: brandColors.primary }}
                 ></div>
               </div>
