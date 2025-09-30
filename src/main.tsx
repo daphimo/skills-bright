@@ -8,6 +8,7 @@ import Services from "./Services.tsx";
 import Process from "./Process.tsx";
 import Industries from "./Industries.tsx";
 import Contact from "./Contact.tsx";
+import Benefits from "./Benefits.tsx";
 import Header from "./components/layout/Header.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import { useSmoothScroll } from "./components/ui/hook.tsx";
@@ -27,6 +28,9 @@ function Root() {
         </div>
         <div id="services">
           <Services />
+        </div>
+         <div id="benefits">
+          <Benefits />
         </div>
          <div id="process">
           <Process />
