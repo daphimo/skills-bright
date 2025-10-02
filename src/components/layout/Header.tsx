@@ -36,8 +36,8 @@ export default function Header() {
       className="fixed top-0 left-0 w-full shadow-sm z-50 overflow-x-hidden"
       style={{ backgroundColor: brandColors.background }}
     >
-      <div className="mx-auto max-w-7xl w-full px-4 py-3 flex items-center justify-between relative z-10">
-        {/* Progress Bar Gutter */}
+    <div className="relative w-full overflow-x-hidden">
+       {/* Progress Bar Gutter */}
         <div
           className="absolute top-0 left-0 h-[3px] w-full"
           style={{ backgroundColor: brandColors.card }}
@@ -51,6 +51,8 @@ export default function Header() {
             }}
           />
         </div>
+      <div className="mx-auto max-w-7xl w-full px-4 py-3 flex items-center justify-between relative z-10">
+       
 
         <div className="container mx-auto max-w-7xl px-4 py-3 flex items-center justify-between relative z-10">
           {/* Logo */}
@@ -180,6 +182,7 @@ export default function Header() {
             <Buttons label="Get HR Support" link="#contact" variant="primary" />
           </div>
         </div>
+      </div>
       </div>
     </header>
   );

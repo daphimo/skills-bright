@@ -7,30 +7,13 @@ interface ServiceCardProps {
 }
 
 const services: ServiceCardProps[] = [
-  {
-    title: "HR Consultancy",
-    content: "Recruitment, employee management, compliance & policy making.",
-  },
-  {
-    title: "Sales Training",
-    content: "Sales techniques, negotiation skills & client handling.",
-  },
-  {
-    title: "Employee Training",
-    content: "Workplace skills, motivation & team building.",
-  },
-  {
-    title: "HR Training",
-    content: "Modern tools & practices for HR professionals.",
-  },
-  {
-    title: "Personality Development",
-    content: "Confidence building, grooming & soft skills.",
-  },
-  {
-    title: "Payroll & Compliance",
-    content: "Payroll, attendance & performance management.",
-  },
+  { title: "HR Consultancy", content: "Recruitment, employee management, compliance & policy making." },
+  { title: "Sales Training", content: "Sales techniques, negotiation skills & client handling." },
+  { title: "Employee Training", content: "Workplace skills, motivation & team building." },
+  { title: "HR Training", content: "Modern tools & practices for HR professionals." },
+  { title: "Personality Development", content: "Confidence building, grooming & soft skills." },
+  { title: "Payroll & Compliance", content: "Payroll, attendance & performance management." },
+  { title: "Counseling", content: "Career guidance, personal development & emotional well-being." },
 ];
 
 const CoreServicesSection: React.FC = () => {
@@ -47,11 +30,11 @@ const CoreServicesSection: React.FC = () => {
           Our Core Services
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 text-center transition-transform "
+              className="flex-1 min-w-[250px] max-w-[300px] bg-white rounded-lg shadow-lg p-6 text-center transition-transform"
               style={{ color: brandColors.text }}
             >
               <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
