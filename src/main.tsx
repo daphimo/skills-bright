@@ -12,6 +12,7 @@ import Benefits from "./Benefits.tsx";
 import Header from "./components/layout/Header.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import { useSmoothScroll } from "./components/ui/hook.tsx";
+import BacktoTop from "./components/ui/BacktoTop.tsx";
 
 function Root() {
   useSmoothScroll();
@@ -29,20 +30,21 @@ function Root() {
         <div id="services">
           <Services />
         </div>
-         <div id="benefits">
+        <div id="benefits">
           <Benefits />
         </div>
-         <div id="process">
+        <div id="process">
           <Process />
         </div>
-         <div id="industries">
+        <div id="industries">
           <Industries />
         </div>
-         <div id="contact">
+        <div id="contact">
           <Contact />
         </div>
       </div>
       <Footer />
+      <BacktoTop />
     </div>
   );
 }
