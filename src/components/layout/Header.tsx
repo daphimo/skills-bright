@@ -110,7 +110,7 @@ export default function Header() {
           {/* Drawer Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b">
             <div className="flex items-center space-x-2">
-              <a href="#home">
+              <a href="#home" aria-label="Home">
                 <img src={logo} alt="Company Logo" className="h-7 w-auto" />
               </a>
             </div>
@@ -127,6 +127,7 @@ export default function Header() {
             {navItems.map((item) => (
               <a
                 key={item.id}
+                aria-label={item.label}
                 href={item.href}
                 className="relative px-6 py-4 text-base font-medium border-b after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full"
                 style={{
