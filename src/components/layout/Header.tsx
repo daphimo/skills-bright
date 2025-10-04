@@ -68,6 +68,7 @@ export default function Header() {
               <a
                 key={item.id}
                 href={item.href}
+                aria-label={item.label}
                 className="relative text-sm font-medium hover:opacity-90 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-current after:transition-all after:duration-300 hover:after:w-full"
                 style={{ color: brandColors.text }}
               >
@@ -159,6 +160,7 @@ export default function Header() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <FaInstagram
                   size={22}
@@ -167,6 +169,7 @@ export default function Header() {
               </a>
               <a
                 href="https://linkedin.com"
+                aria-label="Linkedin"
                 target="_blank"
                 rel="noopener noreferrer"
               >
