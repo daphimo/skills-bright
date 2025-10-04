@@ -11,10 +11,10 @@ const ContactSection: React.FC = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        "service_2j7s9ro",
+        "template_7kz6ptr",
         formRef.current,
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+        "hJH57z05H5CXdzJet"
       )
       .then(() => {
         alert("Message sent successfully!");
@@ -61,7 +61,7 @@ const ContactSection: React.FC = () => {
               type="text"
               name="user_name"
               placeholder="Name"
-              className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+              className="formactive w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
               required
             />
             <input
