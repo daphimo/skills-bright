@@ -29,8 +29,17 @@ const HeroSection: FC = () => {
         {/* Right Image */}
         <div className="flex justify-center md:justify-end">
           <img
-            src="/files/hr_banner.jpg"
+            src="/files/newbanner.webp"
             alt="HR Banner"
+            fetchPriority="high"
+            width="547"
+            height="262"
+            srcSet="
+    /files/newbanner.webp 547w,
+    /files/newbanner.webp 1094w,
+    /files/newbanner.webp 1641w
+  "
+            sizes="(max-width: 768px) 100vw, 547px"
             className="w-full h-auto max-w-md md:max-w-full"
           />
         </div>

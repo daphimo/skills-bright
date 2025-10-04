@@ -54,7 +54,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl w-full px-4 py-3 flex items-center justify-between relative z-10">
        
 
-        <div className="container mx-auto max-w-7xl px-4 py-3 flex items-center justify-between relative z-10">
+        <div className="container mx-auto max-w-7xl flex items-center justify-between relative z-10">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <a href="#home">
