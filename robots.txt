@@ -1,0 +1,7 @@
+# robots.txt for SkillBright
+# Allow all crawlers to access all pages
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.skillsbright.com/sitemap.xml

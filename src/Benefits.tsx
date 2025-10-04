@@ -109,7 +109,7 @@ const SkillBrightSection: React.FC = () => {
         color: brandColors.text,
       }}
     >
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
+      <div className="max-w-7xl py-12 px-4 mx-auto flex flex-col gap-12">
         {/* Top: Benefits */}
         <div>
           <h2 className="text-2xl font-bold mb-2 text-center">
@@ -177,17 +177,17 @@ const SkillBrightSection: React.FC = () => {
           <div className="hidden md:flex flex-col gap-2">
             {/* Header */}
             <div
-              className="grid grid-cols-4 p-2 rounded-lg font-semibold text-sm"
+              className="grid grid-cols-4 rounded-lg font-semibold text-sm"
               style={{
                 background: brandColors.highlight,
                 color: brandColors.text,
               }}
             >
-              <div>Feature</div>
-              <div>In-house</div>
-              <div>Basic Outsource</div>
+              <div className="p-2 flex items-center">Feature</div>
+              <div className="p-2 flex items-center">In-house</div>
+              <div className="p-2 flex items-center">Basic Outsource</div>
               <div
-                className="rounded-md px-2"
+                className="rounded-md p-2 flex items-center"
                 style={{ background: brandColors.secondary, color: "#fff" }}
               >
                 SkillBright
@@ -198,22 +198,22 @@ const SkillBrightSection: React.FC = () => {
             {comparisonRows.map((row, idx) => (
               <div
                 key={idx}
-                className="grid grid-cols-4 p-2 text-sm rounded-lg"
+                className="grid grid-cols-4 flex items-center text-sm rounded-lg"
                 style={{
                   background: brandColors.background,
                   border: `1px solid ${brandColors.highlight}`,
                 }}
               >
                 <div
-                  className="font-semibold"
+                  className="font-semibold flex items-center p-2"
                   style={{ color: brandColors.primary }}
                 >
                   {row.feature}
                 </div>
-                <div className="text-gray-700">{row.inhouse}</div>
-                <div className="text-gray-700">{row.basic}</div>
+                <div className="text-gray-700 flex items-center p-2">{row.inhouse}</div>
+                <div className="text-gray-700 flex items-center p-2">{row.basic}</div>
                 <div
-                  className="rounded-md px-2"
+                  className="rounded-md flex items-center p-2"
                   style={{
                     background: brandColors.secondary,
                     color: "#fff",
