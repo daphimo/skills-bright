@@ -1,35 +1,34 @@
+import { brandColors } from "../Brandcolors.tsx";
 import type { FC } from "react";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer: FC = () => {
   return (
     <footer className="w-full border-t border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        
         {/* Copyright */}
         <p className="text-sm text-gray-600 text-center md:text-left">
-          © {new Date().getFullYear()} Skills Bright HR Solutions. All rights reserved.
+          © {new Date().getFullYear()} Skills Bright HR Solutions. All rights
+          reserved.
         </p>
 
         {/* Social Icons */}
         <div className="flex items-center gap-4">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/skillbrighthr"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="text-gray-600 hover:text-[#E1306C] transition-colors duration-300"
           >
-            <FaInstagram className="w-5 h-5" />
+            <FaInstagram size={22} style={{ color: brandColors.secondary }} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.facebook.com/profile.php?id=61581639960890"
+            aria-label="Facebook"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="text-gray-600 hover:text-[#0A66C2] transition-colors duration-300"
           >
-            <FaLinkedin className="w-5 h-5" />
+            <FaFacebook size={22} style={{ color: brandColors.secondary }} />
           </a>
         </div>
       </div>
