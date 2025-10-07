@@ -74,13 +74,13 @@ const AboutSection: React.FC = () => {
               className="text-2xl font-bold mb-2"
               style={{ color: brandColors.primary }}
             >
-              Kalpana Shetty
+              SkillBright
             </h3>
             <p
               className="text-m font-medium"
               style={{ color: brandColors.secondary }}
             >
-              Founder & HR Expert
+              Founder & CEO
             </p>
           </div>
 
