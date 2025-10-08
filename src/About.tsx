@@ -71,10 +71,16 @@ const AboutSection: React.FC = () => {
             />
 
             <h3
-              className="text-2xl font-bold mb-2"
+              className="text-2xl mb-2"
               style={{ color: brandColors.primary }}
             >
               SkillBright
+            </h3>
+              <h3
+              className="text-xl mb-2"
+              style={{ color: brandColors.primary }}
+            >
+              Kalpana Shetty
             </h3>
             <p
               className="text-m font-medium"
