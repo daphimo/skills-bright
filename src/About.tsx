@@ -69,7 +69,6 @@ const AboutSection: React.FC = () => {
               alt="Kalpana Shetty"
               className="w-full h-auto mb-6 blob-shape"
             />
-
             <h3
               className="text-2xl mb-2"
               style={{ color: brandColors.primary }}
