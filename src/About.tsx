@@ -63,30 +63,17 @@ const AboutSection: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-center px-4">
           {/* Left Section (Image) */}
-          <div className="flex-auto md:flex-[1_1_40%] flex flex-col justify-center items-center md:items-center">
+          <div className="flex-auto md:flex-[1_1_40%] flex flex-col justify-center items-center md:items-center space-y-6">
             <img
               src="/files/new_about.webp"
-              alt="Kalpana Shetty"
-              className="w-full h-auto mb-6 blob-shape"
+              alt="Image 1"
+              className="w-full h-auto blob-shape"
             />
-            <h3
-              className="text-2xl mb-2"
-              style={{ color: brandColors.primary }}
-            >
-              SkillBright
-            </h3>
-              <h3
-              className="text-xl mb-2"
-              style={{ color: brandColors.primary }}
-            >
-              Kalpana Shetty
-            </h3>
-            <p
-              className="text-m font-medium"
-              style={{ color: brandColors.secondary }}
-            >
-              Founder & CEO
-            </p>
+            <img
+              src="/files/main_image.png"
+              alt="Image 2"
+              className="w-50 h-auto "
+            />
           </div>
 
           {/* Right Section (Content) */}
