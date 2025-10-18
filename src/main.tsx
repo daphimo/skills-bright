@@ -14,18 +14,25 @@ import Footer from "./components/layout/Footer.tsx";
 import { useSmoothScroll } from "./components/ui/hook.tsx";
 import BacktoTop from "./components/ui/BacktoTop.tsx";
 
+// PDF Viewer Component
+import PDFViewer from "./PDFViewer.tsx";
+
 function Root() {
   useSmoothScroll();
 
   return (
     <div className="w-full">
       <Header />
-      <div className="pt-24 md:pt-16">
+      <div className="pt-20">
         <div id="home">
           <App />
         </div>
         <div id="about">
           <About />
+        </div>
+        <div id="pdf">
+          <h1>PDF to HTML Demo</h1>
+          <PDFViewer pdfUrl="/files/sample.pdf" />
         </div>
         <div id="services">
           <Services />
