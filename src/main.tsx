@@ -32,7 +32,7 @@ function Root() {
         </div>
         <div id="pdf">
           <h1>PDF to HTML Demo</h1>
-          <PDFViewer pdfUrl="/files/sample.pdf" />
+          <PDFViewer pdfUrl="/files/test.pdf" />
         </div>
         <div id="services">
           <Services />
