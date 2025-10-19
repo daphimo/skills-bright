@@ -106,13 +106,36 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
   }, [pdfUrl]);
 
   return (
-    <div className="pdf-viewer">
-      <h1>📄 PDF Viewer</h1>
-      {loading && <div>Loading PDF...</div>}
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      <div ref={containerRef} style={{ margin: '20px auto' }} />
-    </div>
-  );
+  <div
+    className="pdf-viewer"
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "flex-start",
+      padding: "20px",
+      minHeight: "100vh",
+      backgroundColor: "#f8f9fa",
+    }}
+  >
+    <h1 style={{ marginBottom: "20px", textAlign: "center" }}>📄 PDF Viewer</h1>
+
+    {loading && <div>Loading PDF...</div>}
+    {error && <div style={{ color: "red" }}>{error}</div>}
+
+    <div
+      ref={containerRef}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "20px",
+        maxWidth: "920px",
+        width: "100%",
+      }}
+    />
+  </div>
+);
 };
 
 export default PDFViewer;
